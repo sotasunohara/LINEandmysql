@@ -68,15 +68,15 @@
         <center><input type="image" name="image_button" src="/speacar/img/line.png" onclick=location.href="login/line_login.php">
           <?php
           $fb = new Facebook\Facebook([
-             'app_id' => '1295720377195908', // Replace {app-id} with your app id
-             'app_secret' => '5aa3d70e8f88af6310671a6ecb079431',
-             'default_graph_version' => 'v2.2',
+             'app_id' => 'id', // Replace {app-id} with your app id
+             'app_secret' => 'secret',
+             'default_graph_version' => 'v.??',
              ]);
 
            $helper = $fb->getRedirectLoginHelper();
 
            $permissions = ['email']; // Optional permissions
-           $loginUrl = $helper->getLoginUrl('https://robotdrive.azurewebsites.net/fb-callback.php', $permissions);
+           $loginUrl = $helper->getLoginUrl('url', $permissions);
 
            echo '<a class="FbBtn" href="' . htmlspecialchars($loginUrl) . '">
             <div class="FbBtnLabel">Log in with Facebook!</div>
